@@ -19,7 +19,7 @@ import com.farmacia.farmacia.model.Produto;
 import com.farmacia.farmacia.repository.ProdutoRepository;
 
 @RestController
-@RequestMapping("/tb_produtos")
+@RequestMapping("/produtos")
 @CrossOrigin("*")
 public class ProdutoController {
 	
@@ -37,7 +37,7 @@ public class ProdutoController {
 		return ResponseEntity.ok(repository.findAll());
 	}
 	
-	//.buil indica que a resposta deverá ser renderizada na body
+	//.buid indica que a resposta deverá ser renderizada na body
 	@GetMapping("/{id}") 
 	public ResponseEntity<Produto> GetById(@PathVariable long id){
 		return repository.findById(id)
